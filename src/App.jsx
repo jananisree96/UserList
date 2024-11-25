@@ -16,7 +16,6 @@ const App = () => {
           <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Place</th>
             <th>Email</th>
           </tr>
         </thead>
@@ -25,9 +24,6 @@ const App = () => {
             <tr key={user.id} className="table-row" style={{ animationDelay: `${index * 0.1}s` }}>
               <td data-label="ID">{user.id}</td>
               <td data-label="Name">{user.name}</td>
-              <td data-label="Address">
-                {user.address?.street}, {user.address?.suite}, {user.address?.city}, {user.address?.zipcode}
-              </td>
               <td data-label="Email">{user.email}</td>
             </tr>
           ))}
