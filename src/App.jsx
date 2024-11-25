@@ -16,7 +16,7 @@ const App = () => {
           <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Address</th>
+            <th>Place</th>
             <th>Email</th>
           </tr>
         </thead>
