@@ -1,6 +1,6 @@
 import React from "react";
 import { useFetchUsersQuery } from "./services/userApi";
-import "./index.css"; 
+import "./index.css";
 
 const App = () => {
   const { data: users, error, isLoading } = useFetchUsersQuery();
@@ -23,12 +23,12 @@ const App = () => {
         <tbody>
           {users.map((user, index) => (
             <tr key={user.id} className="table-row" style={{ animationDelay: `${index * 0.1}s` }}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>
+              <td data-label="ID">{user.id}</td>
+              <td data-label="Name">{user.name}</td>
+              <td data-label="Address">
                 {user.address?.street}, {user.address?.suite}, {user.address?.city}, {user.address?.zipcode}
               </td>
-              <td>{user.email}</td>
+              <td data-label="Email">{user.email}</td>
             </tr>
           ))}
         </tbody>
